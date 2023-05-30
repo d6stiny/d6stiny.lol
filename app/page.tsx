@@ -100,7 +100,7 @@ export default function Home() {
         </h2>
         <Card
           title="blursed"
-          description="replacement to the already emerging, closed-source social networks"
+          description="Non-profit organization empowering internet safety building free and open-source software."
           link="https://blursed.org"
         />
 
