@@ -1,21 +1,22 @@
-import {
+import pkg from "react-icons/si/index.js";
+const {
   SiJavascript,
-  SiTypescript,
   SiNodedotjs,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
+  SiTypescript,
   SiFastify,
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
   SiVisualstudiocode,
   SiGit,
   SiGithub,
   SiGithubactions,
   SiPrisma,
   SiPlanetscale,
-  SiCloudflare,
   SiVercel,
+  SiCloudflare,
   SiMacos,
-} from "react-icons/si";
+} = pkg;
 const techstack = {
   backend: [
     {
