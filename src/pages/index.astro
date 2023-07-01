@@ -1,0 +1,149 @@
+---
+import Links from "../components/Links.astro";
+import Card from "../components/Card.astro";
+import TechStack from "../components/TechStack";
+
+function age() {
+	const birthday = +new Date(2006, 10, 28);
+	return ~~((Date.now() - birthday) / 31557600000);
+}
+---
+
+<main
+	class="relative z-10 grid grid-cols-[1fr,min(640px,100%),1fr] gap-y-8 px-4 pt-48 text-base text-rose-100/90 xl:grid-cols-[1fr,minmax(auto,240px),min(640px,100%),minmax(auto,240px),1fr] xl:gap-x-9 xl:px-0 [&>*]:col-start-2 xl:[&>*]:col-start-3"
+>
+	<div class="-mt-12 sm:mt-0">
+		<div class="flex items-center space-x-6">
+			<div
+				class="rounded-full bg-gradient-to-tl from-purple-700/60 to-rose-400/60 shadow-lg ring-[5px] ring-purple-500/10 p-[3px]"
+			>
+				<div class="rounded-full p-px h-[64px] w-[64px]">
+					<img
+						src="https://github.com/d6stiny.png"
+						alt="github profile image"
+						class="rounded-full"
+					/>
+				</div>
+			</div>
+			<div>
+				<h1 class="text-3xl font-medium text-rose-100/80 sm:text-4xl">
+					d6stiny
+				</h1>
+				<h2 class="align-middle text-lg leading-6 text-rose-100/50">
+					<span class="font-medium text-rose-100/70">self-taught</span>
+					<span class="inline">fullstack developer</span>
+				</h2>
+			</div>
+		</div>
+		<p class="mt-7 text-xl text-rose-100/90 sm:mt-9">
+			{age()}y/o from Portugal. Self-taught fullstack developer (though I'm
+			mostly experienced in backend). Apple enthusiast.
+		</p>
+		<div id="oneko" aria-hidden="true"></div>
+		<div class="mt-8 sm:mt-12">
+			<Links />
+		</div>
+
+		<div class="space-y-10 mt-20 sm:mt-32 mb-20">
+			<TechStack />
+			<section id="pastwork">
+				<h2 class="text-2xl font-medium text-rose-100/80 sm:text-3xl mb-2">
+					What I&apos;ve done
+				</h2>
+				<Card
+					title="ublocks (2023)"
+					link="https://ublocks.xyz"
+					image="https://media.licdn.com/dms/image/C5603AQHvVFiash8M8w/profile-displayphoto-shrink_800_800/0/1658399000645?e=1692230400&v=beta&t=BnVjKS0Bx-6odIDOe2pm7eiMLF_6Gn9y1yJWJqLG-8w"
+					role="Software Engineer Intern"
+					techstack={["React", "Bootstrap", "MongoDB"]}
+				/>
+				<Card
+					title="Shiber (2020-2021)"
+					description="An open source discord moderation bot with a web dashboard and a lot of features."
+					link="https://github.com/comfykayyy/Shiber"
+					techstack={["Node.js", "MongoDB", "Express", "EJS"]}
+				/>
+				<Card
+					title="Vary (2017-2020)"
+					description="An open source discord bot with fun stuff."
+					techstack={["Node.js", "MongoDB"]}
+				/>
+				<span class="text-rose-100/50">
+					...and a few more unfinished side projects
+				</span>
+			</section>
+		</div>
+	</div>
+</main>
+
+<style>
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+
+	body {
+		color: rgb(var(--foreground-rgb));
+		background: linear-gradient(
+				to bottom,
+				transparent,
+				rgb(var(--background-end-rgb))
+			)
+			rgb(var(--background-start-rgb));
+	}
+	#oneko {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		right: 2rem;
+		top: 1.3rem;
+		image-rendering: pixelated;
+		background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif");
+		animation: sleep 1s infinite;
+		cursor: pointer;
+
+		@media (prefers-reduced-motion) {
+			display: none;
+		}
+	}
+
+	#oneko:hover {
+		animation: 2.5s 1 forwards wakeup;
+	}
+
+	@keyframes sleep {
+		0%,
+		50% {
+			background-position: -64px 0;
+		}
+		50.00001%,
+		100% {
+			background-position: -64px -32px;
+		}
+	}
+	@keyframes wakeup {
+		0%,
+		20% {
+			background-position: -160px 0;
+		}
+		20.00001%,
+		40% {
+			background-position: -192px 0;
+		}
+		40.00001%,
+		60% {
+			background-position: -224px 0;
+		}
+		60.00001%,
+		80% {
+			background-position: -96px -64px;
+		}
+		80.00001%,
+		100% {
+			background-position: -96px -96px;
+		}
+	}
+</style>
