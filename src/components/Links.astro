@@ -1,10 +1,40 @@
 ---
-import { GitHubIcon, InstagramIcon, TwitchIcon } from "./Icons";
+import GitHubIcon from "./icons/GitHub.astro";
+import TwitchIcon from "./icons/Twitch.astro";
+import InstagramIcon from "./icons/Instagram.astro";
 ---
 
 <div
   class="flex items-center space-x-7 text-base font-semibold leading-none text-rose-100/90"
 >
+  <a
+    href="/work"
+    class="group focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70"
+  >
+    <div class="sm:flex sm:items-center sm:space-x-2">
+      <div class="mb-1.5 flex justify-center sm:mb-0 sm:block">
+        <div
+          class="rounded-lg bg-gradient-to-tl from-purple-500/80 to-rose-400/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-purple-500/40 group-active:translate-y-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path
+              d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+      </div>
+      <div>Work</div>
+    </div>
+  </a>
+
   <a
     href="https://github.com/d6stiny"
     class="group focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70"

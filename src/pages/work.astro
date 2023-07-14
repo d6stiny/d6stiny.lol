@@ -1,0 +1,58 @@
+---
+import Layout from "../components/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Card.astro";
+---
+
+<Navbar currentPage="work" />
+<Layout>
+  <section id="pastwork">
+    <h2 class="text-2xl font-medium text-rose-100/80 sm:text-3xl mb-2">
+      Companies
+    </h2>
+    <Card
+      date="2023"
+      title="ublocks"
+      link="https://ublocks.xyz"
+      image="https://media.licdn.com/dms/image/C5603AQHvVFiash8M8w/profile-displayphoto-shrink_800_800/0/1658399000645?e=1692230400&v=beta&t=BnVjKS0Bx-6odIDOe2pm7eiMLF_6Gn9y1yJWJqLG-8w"
+      whatisitabout="Web3 and Crypto solution provider to other companies."
+      role="Software Engineer Intern"
+      whatidid="As an intern, where nothing really impressive was expected from me, I was put working on a dashboard for the company's clients to manage their marketplace & surveys."
+      techstack={["React", "Bootstrap", "MongoDB"]}
+    />
+    <h2 class="text-2xl font-medium text-rose-100/80 sm:text-3xl mb-2">
+      Personal Projects
+    </h2>
+    <Card
+      date="2019-2020"
+      title="Shiber"
+      whatisitabout="Discord Bot"
+      description="An open source Discord moderation bot with a web dashboard and a lot of features."
+      whatidid="I did pretty much everything from the scratch, bot, web dashboard, etc."
+      link="https://github.com/comfykayyy/Shiber"
+      techstack={["Node.js", "MongoDB", "Express", "EJS"]}
+    />
+    <Card
+      date="2017-2019"
+      title="Vary"
+      whatisitabout="Discord Bot"
+      description="An open source Discord bot with fun stuff."
+      whatidid="I was the creator and main maintainer of the bot. too bad i deleted the repo"
+      techstack={["Node.js", "MongoDB"]}
+    />
+    <span class="text-rose-100/50">
+      ...and a few more unfinished side projects
+    </span>
+    <h2 class="text-2xl font-medium text-rose-100/80 sm:text-3xl mb-2">
+      Contributions
+    </h2>
+    <Card
+      date="2019-2023"
+      title="Chino Kafuu"
+      whatisitabout="Discord Bot"
+      description="An incredible bot which can help you in your daily routine in your guild whenever you need it."
+      whatidid="I used to contribute with small chunks of code/localization."
+      link="https://github.com/RabbitHouseCorp/ChinoKafuu"
+    />
+  </section>
+</Layout>
